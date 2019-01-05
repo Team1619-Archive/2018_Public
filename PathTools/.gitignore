@@ -1,0 +1,6 @@
+.vscode/
+
+client/node_modules/
+client/build/
+
+web-server/node_modules/

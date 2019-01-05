@@ -1,0 +1,24 @@
+@size: 1.0em;
+
+div.connection-status {
+    font-size: @size;
+
+    h4 {
+        display: flex;
+    }
+
+    .indicator {
+        margin: 0.25em;
+        height: @size;
+        width: @size;
+        border-radius: 40%;
+    }
+
+    .connected {
+        background-color: rgb(0, 230, 0);
+    }
+
+    .disconnected {
+        background-color: red;
+    }
+}

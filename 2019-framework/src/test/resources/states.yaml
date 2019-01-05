@@ -1,0 +1,11 @@
+state:
+  intake_on:
+    behavior: intake_set
+    behavior_config:
+      setpoint: 1.0
+  drive:
+    behavior: drive
+    behavior_config:
+      x: driver_x
+      y: driver_y
+

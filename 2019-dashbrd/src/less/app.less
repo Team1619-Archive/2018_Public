@@ -1,0 +1,37 @@
+@import '~antd/dist/antd.less';
+
+@import './variables.less';
+
+html {
+	font-family: @font-family;
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+
+	section#app {
+		height: 100%;
+
+		.ant-layout {
+			height: inherit;
+		}
+
+		.ant-tabs-bar {
+			background-color: @white;
+			border-bottom-color: #DDD;
+		}
+
+		.ant-tabs, .ant-tabs-content {
+			height: inherit;
+		}
+
+		.ant-layout-footer {
+			background: @white;
+		}
+	}
+}
+
+div#root {
+	height: 100vh;
+}

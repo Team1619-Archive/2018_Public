@@ -1,0 +1,12 @@
+accelerometer_input:
+  vi_accelerometer:
+
+odometry_input:
+  vi_odometry:
+    file_path: /home/lvuser/logs/data.csv
+#    file_path: C:\Users\nevin\Team 1619 Code\sim-data\data.csv
+    print_button: bi_intake
+    left_encoder: ni_drive_left_position
+    right_encoder: ni_drive_right_position
+    heading_sensor: ni_navx
+    acceleration_sensor: vi_accelerometer

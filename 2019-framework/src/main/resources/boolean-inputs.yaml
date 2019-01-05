@@ -1,0 +1,17 @@
+controller_button:
+  bi_intake:
+    port: 0
+    button: a
+  bi_servo:
+    port: 0
+    button: b
+  bi_drive_gear:
+    port: 0
+    button: left_bumper
+  bi_drive_straight:
+    port: 0
+    button: right_bumper
+digital_input:
+  bi_elevator_limit_switch:
+    id: 0
+    inverted: true

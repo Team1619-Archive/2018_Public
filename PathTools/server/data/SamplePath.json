@@ -1,0 +1,28 @@
+{
+  "SamplePath": {
+    "id0": {
+      "Points": [
+        {
+          "Point": {
+            "x": 0,
+            "y": 0,
+            "heading": 0
+          }
+        }
+      ],
+      "SnapNextSegment": true
+    },
+    "id1": {
+      "Points": [
+        {
+          "Point": {
+            "x": 5,
+            "y": 6,
+            "heading": 180
+          }
+        }
+      ],
+      "SnapNextSegment": false
+    }
+  }
+}

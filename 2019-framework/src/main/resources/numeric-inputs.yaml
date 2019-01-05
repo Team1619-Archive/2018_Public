@@ -1,0 +1,23 @@
+controller_axis:
+  ni_driver_y:
+    port: 0
+    axis: 1
+  ni_driver_x:
+    port: 0
+    axis: 4
+encoder:
+  ni_drive_left_position:
+    device_number: 1
+    feedback_device: quad_encoder
+    counts_per_unit: 24.53125
+    unit: inch
+
+  ni_drive_right_position:
+      device_number: 14
+      feedback_device: quad_encoder
+      counts_per_unit: 24.53125
+      unit: inch
+navx:
+  ni_navx:
+    inverted: false
+

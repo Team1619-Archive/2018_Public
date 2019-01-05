@@ -1,0 +1,67 @@
+servo:
+  mo_test_servo:
+    device_channel: 0
+
+talon:
+  mo_intake:
+    device_number: 5
+    inverted: true
+
+  mo_left_drive_primary:
+    device_number: 1
+    inverted: true
+
+  mo_left_drive_slave_1:
+    device_number: 0
+    inverted: true
+
+  mo_left_drive_slave_2:
+    device_number: 2
+    inverted: true
+
+  mo_right_drive_primary:
+    device_number: 14
+    inverted: false
+
+  mo_right_drive_slave_1:
+    device_number: 15
+    inverted: false
+
+  mo_right_drive_slave_2:
+    device_number: 13
+    inverted: false
+
+  mo_elevator_1:
+    device_number: 12
+
+  mo_elevator_2:
+    device_number: 13
+
+  mo_elevator_3:
+    device_number: 2
+
+talon_group:
+  mo_drive_left:
+    master: mo_left_drive_primary
+    slaves: [mo_left_drive_slave_1, mo_left_drive_slave_2]
+
+  mo_drive_right:
+    master: mo_right_drive_primary
+    slaves: [mo_right_drive_slave_1, mo_right_drive_slave_2]
+
+  mo_elevator_motor:
+    master: mo_elevator_1
+    slaves: [mo_elevator_2, mo_elevator_3]
+
+pid_talon:
+  mo_elevator:
+    talon: mo_elevator_motor
+    feedback_sensor:
+    up:
+      p: 0.0
+      i: 0.0
+      d: 0.0
+    down:
+      p: 0.0
+      i: 0.0
+      d: 0.0

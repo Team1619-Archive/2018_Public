@@ -1,0 +1,12 @@
+general:
+  states: [st_servo_on, st_intake_on, st_drive_low, st_drive_high, st_sequencer_test]
+  behaviors: [bh_servo_set, bh_intake_set, bh_drive, bh_print]
+  subsystems: [ss_servo, ss_intake, ss_drive, ss_print]
+  boolean_inputs: [bi_servo, bi_intake, bi_drive_gear, bi_drive_straight, bi_elevator_limit_switch]
+  numeric_inputs: [ni_driver_x, ni_driver_y, ni_drive_left_position, ni_drive_right_position, ni_navx]
+  vector_inputs: [vi_accelerometer, vi_odometry]
+  motors: [mo_test_servo, mo_intake, mo_drive_left, mo_drive_right]
+  solenoids: [so_drive_gear]
+  #  st_parallel_test,
+autonomous:
+  state: st_parallel_test

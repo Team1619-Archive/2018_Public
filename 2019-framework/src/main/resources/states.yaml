@@ -1,0 +1,52 @@
+state:
+  st_servo_on:
+    behavior: servo_set
+    behavior_config:
+      setpoint: 0.5
+  st_intake_on:
+    behavior: intake_set
+    behavior_config:
+      setpoint: 1.0
+  st_drive_low:
+    behavior: bh_drive
+    behavior_config:
+      x: ni_driver_x
+      y: ni_driver_y
+      is_drive_low: true
+      drive_straight: bi_drive_straight
+  st_drive_high:
+    behavior: bh_drive
+    behavior_config:
+      x: ni_driver_x
+      y: ni_driver_y
+      is_drive_low: false
+      drive_straight: bi_drive_straight
+  print_a:
+    behavior: print
+    behavior_config:
+      print_string: a
+  print_b:
+    behavior: print
+    behavior_config:
+      print_string: b
+  print_c:
+    behavior: print
+    behavior_config:
+      print_string: c
+
+timed_state:
+  print_a_timed:
+    state: print_a
+    timeout: 3000
+  print_c_timed:
+    state: print_c
+    timeout: 10000
+
+parallel_state:
+  st_parallel_test:
+    foreground_states: [[print_a_timed, print_b], [print_c_timed, none]]
+    background_states: [drive]
+
+sequencer_state:
+  st_sequencer_test:
+    sequence: [print_a_timed, print_c_timed]
